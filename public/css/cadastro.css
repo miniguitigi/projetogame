@@ -1,0 +1,388 @@
+
+
+body {
+    background-color: #111111;
+}
+
+* {
+    margin: 0px;
+    padding: 0%;
+    max-width: 100%;
+    color: #ffffff;
+}
+
+#tipo {
+    color: #000;
+}
+#tipo option {
+    color: #000;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: row;
+}
+
+/*.cadastrarLogin {
+    width: 54%;
+    height: 62%;
+    border-radius: 10px;
+    background: rgb(85, 30, 71);
+    background: linear-gradient(177deg, rgb(42, 187, 187) 0%, rgb(88, 5, 40) 44%, rgba(53, 209, 38, 0.884) 98%);
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3%;
+    justify-content: space-around;
+}*/
+
+.conteudoRight {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    height: 15%;
+}
+
+.bemvindoP {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.bemvindoP2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: -10%;
+    font-family: 'Inter', sans-serif;
+}
+
+.textoRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.imgDash {
+    width: 90%;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111111;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.container {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    bottom: 0;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+}
+
+.titulo h1 {
+    font-size: 36px;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.titulo p {
+    margin-top: 19px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+.left {
+    display: flex;
+    width: 34%;
+    height: 100vh;
+    background-color: #111111;
+}
+
+.container-inputs {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container-inputs input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    border: 0.8px solid #9598C1;
+    color: #9598C1;
+    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    background: #1111;
+    padding: 10px;
+}
+
+.inputs {
+    margin-top: 12px;
+    
+}
+
+.inputs p {
+    margin-bottom: 9px;
+}
+
+.esqueceu_senha {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+}
+
+.semconta {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    margin-top: 3%;
+    font-size: 24px;
+}
+
+.semconta a {
+    text-decoration: none;
+    color: #1da370;
+    margin-left: 2px;
+    font-family: 'Inter', sans-serif;
+}
+
+.login {
+    margin-top: 30px;
+}
+
+.login button {
+    width: 530px;
+    height: 50px;
+    
+    background-color: #2720EC;
+    border: none;
+    transition: transform 0.5s;
+    cursor: pointer;
+    
+    border-radius: 10px;
+    background: rgb(1, 31, 36);
+    background: linear-gradient(177deg, rgb(3, 75, 63) 0%, rgb(8, 145, 115) 44%, rgba(189, 245, 233, 0.884) 98%);
+}
+
+/* tirando o spinner da input tipo Number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 1366px) {
+
+    .right {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #111111;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .titulo h1 {
+        font-size: 36px;
+        
+    }
+
+    .titulo p {
+        margin-top: 19px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+
+    .left {
+        display: flex;
+        width: 50%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-color: #111111;
+        background-image: url(../img/fundo-login.svg);
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .container-inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        font-weight: bold;
+        width: auto;
+    }
+
+    .container-inputs input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px;
+        border: 0.8px solid #9598C1;
+        color: #9598C1;
+        
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+        background: #1111;
+        padding: 15px;
+    }
+
+    .inputs {
+        margin-top: 10px;
+    }
+
+    .inputs p {
+        
+        margin-bottom: 15px;
+    }
+
+    .semconta {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        
+        margin-top: 3%;
+    }
+
+    .semconta a {
+        text-decoration: none;
+        color: #3594BB;
+        margin-left: 2px;
+    }
+
+    .login {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login button {
+        width: 480px;
+        height: 50px;
+        
+        background-color: #7449EB;
+        border: none;
+        transition: transform 0.5s;
+        cursor: pointer;
+    }
+
+    .container {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .left {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .container-inputs {
+        width: 100%;
+        justify-content: left;
+        align-items: baseline;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .container-inputs input {
+        width: 96%;
+
+    }
+
+    .inputs {
+        width: 100%;
+    }
+}
+
+@media (max-width: 431px) {
+
+    .container-inputs input {
+        width: 96%;
+
+
+    }
+
+    .inputs {
+        width: 94.5%;
+
+    }
+}

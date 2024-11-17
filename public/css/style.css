@@ -1,0 +1,97 @@
+.fontes{
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+
+/* jogos */
+.areajogos {
+  height: 90vh;
+}
+
+.areajogos .container {
+  width: 100%;
+  height: 100%;
+}
+
+.areajogos .areaTitulo {
+  height: 20%;
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+.areajogos .areaTitulo .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.areajogos .areaCards {
+  display: flex;
+  height: 90%;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.158);
+}
+
+.areajogos .areaCards .card {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  overflow: hidden; 
+}
+
+.areajogos .areaCards .card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.areajogos .areaCards .card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.areajogos .areaCards .card:hover img {
+  filter: grayscale(0%);
+}
+
+.areajogos .areaCards .card .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+.areajogos .areaCards .card:hover .info {
+  transform: translateY(0);
+}
+
+.titulojogos {
+  font-size: 50px;
+  position: relative;
+}
+
+.titulojogos::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background: #2720EC;
+  font-family: 'Luckiest Guy', sans-serif;
+}
+
+/* FIM jogos */
