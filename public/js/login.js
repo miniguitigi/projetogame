@@ -36,7 +36,8 @@ function entrar() {
     var senhaVar = document.getElementById('senha').value;
 
 
-    fetch("/usuarios/autenticar", {
+    fetch("/usuarios/autenticar",{
+        
         method: "POST",
         headers: {
             "Content-Type": "application/json"

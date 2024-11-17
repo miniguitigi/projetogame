@@ -1,7 +1,6 @@
 var database = require("../database/config")
 
-function autenticar(user, senha) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
+function entrar(user, senha) {
     var instrucaoSql = `
         SELECT userC, senha 
         FROM cadastro 
@@ -25,6 +24,7 @@ function cadastrar( user, email, senha, confirmarSenha, dtNasc) {
 }
 
 module.exports = {
-    autenticar,
+    entrar,
+    // autenticar,
     cadastrar
 };

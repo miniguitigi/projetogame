@@ -1,39 +1,70 @@
 var usuarioModel = require("../models/usuarioModel");
 
 
-function autenticar(req, res) {
+// function autenticar(req, res) {
+//     const { userServer: user, senhaServer: senha } = req.body;  
+
+//     console.log('entrei na func autenticar')
+
+//     if (!user) {
+//         res.status(400).send("Seu usuário está indefinido ou vazio!");
+//     } else if (!senha) {
+//         res.status(400).send("Sua senha está indefinida ou vazia!");
+//     }else { 
+
+//         console.log('**********entrei no else da func autenticar')
+
+//         usuarioModel.autenticar(user, senha)
+//         .then(
+//             function (resultado) {
+//                 console.log(`\nResultados encontrados: ${resultado.length}`);
+//                 console.log(`Resultados: ${JSON.stringify(resultado)}`);
+
+//                 if (resultado.length == 1) {
+//                     console.log(resultado);
+
+//                     usuarioModel.acessos(user);
+
+//                     res.json(resultado[0]);
+//                 } else if (resultado.length == 0) {
+//                     res.status(403).send("Usuário e/ou senha inválido(s)");
+//                 } else {
+//                     res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+//                 }
+//             }
+//         ).catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+//     }
+// }
+
+function entrar(req, res) {
     var user = req.body.userServer;
     var senha = req.body.senhaServer;
-
-    console.log('entrei na func autenticar')
 
     if (user == undefined) {
         res.status(400).send("Seu usuário está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-
-        usuarioModel.autenticar(user, senha)
+        
+        usuarioModel.entrar(user, senha)
             .then(
-                function (resultadoAutenticar) {
-                    console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+                function (resultado) {
+                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
 
-                    if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
+                    if (resultado.length == 1) {
+                        console.log(resultado);
 
-                        usuarioModel.buscarAquariosPorEmpresa(resultadoAutenticar[0].empresaId)
-                            .then((resultadoAquarios) => {
-                                if (resultadoAquarios.length > 0) {
-                                    res.json({
-                                        user: resultadoAutenticar[0].user,
-                                        senha: resultadoAutenticar[0].senha,
-                                    });
-                                } else {
-                                    res.status(204).json({ aquarios: [] });
-                                }
-                            })
-                    } else if (resultadoAutenticar.length == 0) {
+                        usuarioModel.acessos(user);
+
+                        res.json(resultado[0]);
+                    } else if (resultado.length == 0) {
                         res.status(403).send("Usuário e/ou senha inválido(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
@@ -92,6 +123,7 @@ function cadastrar(req, res) {
 }
 
 module.exports = {
-    autenticar,
+    entrar,
+    // autenticar,
     cadastrar
 }
